@@ -11,6 +11,11 @@ hash = "a48ece669b8fd6d5ffcfc62ea162b7ef4d2ebde411f55f83867dcc0aafd9b8e3"
 metafile = true
 
 [[files]]
+file = "mods/buttonfix.pw.toml"
+hash = "d3b91b7f36fab02c451c3d633ff996319deb4d410f44e40ec73120ca7a103fe1"
+metafile = true
+
+[[files]]
 file = "mods/c2me-fabric.pw.toml"
 hash = "d64fd8ba65b154b94938d482de710514a8e49c7a02b735e21e182e5ed4f00f65"
 metafile = true
