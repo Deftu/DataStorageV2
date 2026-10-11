@@ -16,7 +16,7 @@ metafile = true
 
 [[files]]
 file = "mods/better-screens.pw.toml"
-hash = "83c472da4aeca1ad34e9eef452eea62020b4e201b1abed9d9dae67300adf2769"
+hash = "bfb5877609866d2923cd704c749e410e6519b8952e88f69d912fbf10e7f320bf"
 metafile = true
 
 [[files]]
@@ -146,7 +146,7 @@ metafile = true
 
 [[files]]
 file = "mods/fovchanger.pw.toml"
-hash = "badae05b9396c117aca160bb7761789bf8939271ac33cb8f8f6d817ce3e29abf"
+hash = "5b84ce315026ec920a9dbc3094b730c3b34044820b7938aeea03c214d16d4e82"
 metafile = true
 
 [[files]]
