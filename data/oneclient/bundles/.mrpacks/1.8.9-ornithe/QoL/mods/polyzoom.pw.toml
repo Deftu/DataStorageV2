@@ -2,15 +2,15 @@ id = "KRkUREPv"
 enabled = true
 hidden = false
 name = "PolyZoom"
-filename = "PolyZoom-1.0.2.jar"
+filename = "PolyZoom-1.0.3.jar"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/KRkUREPv/versions/QIrZJ9f7/PolyZoom-1.0.2.jar"
+url = "https://cdn.modrinth.com/data/KRkUREPv/versions/K8JEvM6g/PolyZoom-1.0.3.jar"
 hash-format = "sha512"
-hash = "6352e2dcac8560043d6ad04519e5f13a50b1c41d7ac993774f9db8d53375c1cc752bcf2b714f1660747912a271dd1ec32ebc2259b9aef8eb006dd5fccfd22b5d"
+hash = "579d6e0c581bd30a50df0164aaa34d44f4fe45b9d37f1f3b7bc8d16c71da1d7891cab3bcce447b66292ae8bee45d4712e67bcab7eb29d8a0352dba1fee868534"
 
 [update]
 [update.modrinth]
 mod-id = "KRkUREPv"
-version = "QIrZJ9f7"
+version = "K8JEvM6g"

@@ -6,7 +6,7 @@ hash = "3cd9631fd513b5a5dde393778f1d09e9a8a93c2877ecbf3e4db932723d5ae79f"
 
 [[files]]
 file = "mods/animations.pw.toml"
-hash = "e827844d9c644170184dd1ea4f64c07af7660abc6d25fe1ff36929ec419f7c20"
+hash = "8e80bc824f70fb3d2b33518b8d845724a284ac5b88a594ade9591fa11d42e612"
 metafile = true
 
 [[files]]
@@ -26,12 +26,12 @@ metafile = true
 
 [[files]]
 file = "mods/chatting.pw.toml"
-hash = "e2c4b47bc69a1ed4a316f786be0eff593a5463cab05510803b75a6cd21d3e990"
+hash = "224875d5ebad4d6a28edaa83d943497ffa59ba4718da7a8d3b4d5e9a27471fa9"
 metafile = true
 
 [[files]]
 file = "mods/chattweaks.pw.toml"
-hash = "32a64865e4da8df62cb235d36fec6b42d821cf5a3cf6e66f121c7df18f81c89b"
+hash = "ca013191a36ac02333fd24e187471bbb06aec0f4dd000c81c469f2549ee5017f"
 metafile = true
 
 [[files]]
@@ -86,7 +86,7 @@ metafile = true
 
 [[files]]
 file = "mods/glintcolorizer.pw.toml"
-hash = "615adb9e56e8928edb511eace119f68a81d39f456725df8a3dc569d44c0abac0"
+hash = "5d41370ecc3e037c3091da5f87ec5421c20860ee1777c255e810340821a60b83"
 metafile = true
 
 [[files]]
@@ -121,7 +121,7 @@ metafile = true
 
 [[files]]
 file = "mods/legacyskinlayers.pw.toml"
-hash = "113ba1fa66d10f8239c515eaf429ca33f24b9d5f619bf722782ffa57d0792ee3"
+hash = "9523647cbca8fea7d6e55710a7a6906f36b0eb0847428972c04667e5a724fbcb"
 metafile = true
 
 [[files]]
@@ -141,7 +141,7 @@ metafile = true
 
 [[files]]
 file = "mods/oneconfig.pw.toml"
-hash = "21724a2fcefce0a2369c5ff08bd4603b9512c5a8b05b992f85406cc92194fb2d"
+hash = "61d1960e777c61e08a3a56b1cf38f524fd5a96af482a7ed92f051c20995a4a4f"
 metafile = true
 
 [[files]]
@@ -151,7 +151,7 @@ metafile = true
 
 [[files]]
 file = "mods/overflowparticles.pw.toml"
-hash = "823e40e72b14cc9d6c8772c8c03972de8a60ea9542561a180dfd1f84d139e92a"
+hash = "244ba566f7deab5c7c269fb4f13c2820aac6bf8599ea2654e1c531120cfb28b5"
 metafile = true
 
 [[files]]
@@ -171,7 +171,7 @@ metafile = true
 
 [[files]]
 file = "mods/polyplus.pw.toml"
-hash = "53879fc117786c5e2a84c47e59d71f9b4644bf92074921fe2a3ff790d4c463d2"
+hash = "ed8787b8dfe83815642beaf86635811265dc539f2763f7eed90f3663aa1e28bd"
 metafile = true
 
 [[files]]
@@ -186,7 +186,7 @@ metafile = true
 
 [[files]]
 file = "mods/polyzoom.pw.toml"
-hash = "c270fc129eebe1ad4cba75b06c8aee67f288c6485dfe29c7af03aa4cc28ca7e7"
+hash = "7b29bfe4fcb24ebf00c13a81a01693cc053648a201c3b39d6356a93ebe2e66c0"
 metafile = true
 
 [[files]]
@@ -196,7 +196,7 @@ metafile = true
 
 [[files]]
 file = "mods/redaction.pw.toml"
-hash = "7d90ecd4ab9c04e8d3032ccc617bb057e537968b697d079a000c5dfd3502555e"
+hash = "88295e9c57b39522f8f9923942d370e6a2137aabccad30a948b4f9eec1b86973"
 metafile = true
 
 [[files]]

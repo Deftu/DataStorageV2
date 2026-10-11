@@ -51,12 +51,12 @@ metafile = true
 
 [[files]]
 file = "mods/chatting.pw.toml"
-hash = "e5e9a14333413499d0607b48a2ab92438cec68d9bfbf19ef7785e1dd5f4136b9"
+hash = "b3d8513ca250e8e89a5105677c1bb309cba4c7a90e5285041bbf79787f63b464"
 metafile = true
 
 [[files]]
 file = "mods/chattweaks.pw.toml"
-hash = "07ea988e648eff3d24b4ba27918e456fbf45bb16940f988100897c85c612cb5c"
+hash = "27d8cc08a553eabc949eb05cd39048baa5188f058ca41b603b570d4d4350b3a2"
 metafile = true
 
 [[files]]
@@ -236,7 +236,7 @@ metafile = true
 
 [[files]]
 file = "mods/oneconfig.pw.toml"
-hash = "cd9b09dde1212d9b7ca03212026da805e7e6e337f3f6b8713b7e115106d556a5"
+hash = "2b5b8b858e34d7b6f04d0b8f6290a8e1a23e9959fa87e4f1a50f07077d11e1b8"
 metafile = true
 
 [[files]]
@@ -246,7 +246,7 @@ metafile = true
 
 [[files]]
 file = "mods/overflowparticles.pw.toml"
-hash = "eea61533c5ea7dcd3882076e187e95a2ed080bed77194cfb9f77f9d3257b1d90"
+hash = "760e37e521feb27eb611b270a115169aae5859ac81c738531129d24be0c92489"
 metafile = true
 
 [[files]]
@@ -271,7 +271,7 @@ metafile = true
 
 [[files]]
 file = "mods/polyplus.pw.toml"
-hash = "c1eec408dedbb86adb692dd053ac7ace54f92ffc927508afc3ae3bb1c6ea365a"
+hash = "0c2f4f7bc228219e5b11a5494cd484e138b0947846466b90ad2a8f1a877f4637"
 metafile = true
 
 [[files]]
@@ -291,7 +291,7 @@ metafile = true
 
 [[files]]
 file = "mods/redaction.pw.toml"
-hash = "f47d0d3af4db308c120a8f212fdce0cfddfefa7214173b90b0a24751ef51b632"
+hash = "fc790ed2e0a30b3d7a254141b9ecf07d6d57fb5da00c4e4a59daa79168fd5c37"
 metafile = true
 
 [[files]]

@@ -2,16 +2,16 @@ id = "4Hfmgaef"
 enabled = true
 hidden = false
 name = "OverflowAnimations"
-filename = "overflowanimations-5.0.6+1.21.11-fabric.jar"
+filename = "overflowanimations-5.0.8+1.21.11-fabric.jar"
 side = "client"
 type = "advanced"
 
 [download]
-url = "https://cdn.modrinth.com/data/4Hfmgaef/versions/ICHC7Ep0/overflowanimations-5.0.6%2B1.21.11-fabric.jar"
+url = "https://cdn.modrinth.com/data/4Hfmgaef/versions/dNgl1khs/overflowanimations-5.0.8%2B1.21.11-fabric.jar"
 hash-format = "sha512"
-hash = "76ecc397f4ec17d1ecac259c5a77a9c199f2215c1666eebf43dc73b166a6750c6416402af6bfad741ec905580443b18c173edb59fec0fdb487b0f114cf1bc8f0"
+hash = "91141bea5a094b41542200604948185eb948b0f7271c685f5b62fd95e0e783dc9d83533ea093589199d6e2c56875a2b366a1e8c9def6f119f2507c08f6cd9699"
 
 [update]
 [update.modrinth]
 mod-id = "4Hfmgaef"
-version = "ICHC7Ep0"
+version = "dNgl1khs"

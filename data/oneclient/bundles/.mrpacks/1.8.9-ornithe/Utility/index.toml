@@ -41,12 +41,12 @@ metafile = true
 
 [[files]]
 file = "mods/hitbox.pw.toml"
-hash = "9d0c49a45aee347f7e07be55d1bc1aba1bc420fe3d1ba06caf234772bf311208"
+hash = "4bf5c584eae66847c4231b045282c2c640b06ab79ddd800242084703f2f960e3"
 metafile = true
 
 [[files]]
 file = "mods/oneconfig.pw.toml"
-hash = "21724a2fcefce0a2369c5ff08bd4603b9512c5a8b05b992f85406cc92194fb2d"
+hash = "61d1960e777c61e08a3a56b1cf38f524fd5a96af482a7ed92f051c20995a4a4f"
 metafile = true
 
 [[files]]

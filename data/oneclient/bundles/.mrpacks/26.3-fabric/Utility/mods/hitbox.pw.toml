@@ -7,11 +7,11 @@ side = "client"
 type = "normal"
 
 [download]
-url = "https://cdn.modrinth.com/data/Mptc0jo6/versions/GPXCa61g/polyhitbox-1.3.2%2B26.3.jar"
+url = "https://cdn.modrinth.com/data/Mptc0jo6/versions/FlSe8dgD/polyhitbox-1.3.2%2B26.3.jar"
 hash-format = "sha512"
-hash = "22deba69d792dc81be7012d1af35f0f859401fcf4f60f9e159392ce3ed226160d16b2a6b8880ee55011b7f37d5a42d70a8043a51aca70b0a88ca797611c904ce"
+hash = "344a259e8005557adfe695ef6e2cf1dd2d0ccf9b1ebdf8a2f2f897fc481b1f19e1a65ab96f2f814e1b347728e065d18e1b70fb93ea4bab585d72e75d3e1b762d"
 
 [update]
 [update.modrinth]
 mod-id = "Mptc0jo6"
-version = "GPXCa61g"
+version = "FlSe8dgD"

@@ -6,11 +6,11 @@ filename = "polyhitbox-1.3.2+1.8.9.jar"
 side = "client"
 
 [download]
-url = "https://cdn.modrinth.com/data/Mptc0jo6/versions/s02yBXIO/polyhitbox-1.3.2%2B1.8.9.jar"
+url = "https://cdn.modrinth.com/data/Mptc0jo6/versions/WK4a7MIk/polyhitbox-1.3.2%2B1.8.9.jar"
 hash-format = "sha512"
-hash = "8a688cd0d229af2f2131692ca126eac5faad6489d03327188b149429eba6bb429ab7c9b7826c851a24d80843f3046d22ec0f5967e3d82e1b7b86b77f1cf1ce1e"
+hash = "a8f439e75b79ad4b59e79a9c91fb35a1ead75a954658d7211ce5590e10b05deb864132c4ce2f87dbaecb47ad790c1d2da0c17bd67104d073b4762149711d3976"
 
 [update]
 [update.modrinth]
 mod-id = "Mptc0jo6"
-version = "s02yBXIO"
+version = "WK4a7MIk"
