@@ -135,11 +135,6 @@ hash = "f27bd253ae498ae21ded7ce72dd195e363751363d775d025c67cf55501efd2f9"
 metafile = true
 
 [[files]]
-file = "mods/firmament-packet-fix.pw.toml"
-hash = "3eefd3964f2eef2c64612b3f6e87702a9d04f5235b6b3a6827c2aee07724e2e3"
-metafile = true
-
-[[files]]
 file = "mods/flashback.pw.toml"
 hash = "dbb2fecbff02370b9b898f032eb6c7e5ab996b8e247a99648199f091659d38a9"
 metafile = true
