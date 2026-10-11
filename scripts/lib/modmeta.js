@@ -95,9 +95,22 @@ async function ensureCached(pwMod) {
   const url = pwMod?.download?.url;
   if (!url) throw new Error(`no download url for ${pwMod?.filename || key}`);
 
-  const res = await fetch(url, { redirect: "follow" });
-  if (!res.ok) throw new Error(`download failed (${res.status}) for ${url}`);
-  const buf = Buffer.from(await res.arrayBuffer());
+  let buf;
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const res = await fetch(url, { redirect: "follow" });
+      if (res.ok) {
+        buf = Buffer.from(await res.arrayBuffer());
+        break;
+      }
+      const err = new Error(`download failed (${res.status}) for ${url}`);
+      err.permanent = res.status !== 429 && res.status < 500;
+      throw err;
+    } catch (e) {
+      if (e.permanent || attempt === 4) throw e;
+      await new Promise((r) => setTimeout(r, 1000 * 2 ** attempt));
+    }
+  }
 
   // Verify integrity against the hash pinned in the .pw.toml (sha512/sha256/sha1).
   const fmt = (pwMod.download["hash-format"] || "sha512").replace(/-/g, "");
