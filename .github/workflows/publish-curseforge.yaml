@@ -1,0 +1,191 @@
+name: "Publish CurseForge"
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Pack version (defaults to the latest Modrinth version per Minecraft version)"
+        required: false
+        type: string
+      dry_run:
+        description: "Build and launch-test the packs without uploading them"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publish-curseforge
+  cancel-in-progress: false
+
+jobs:
+  Packs:
+    name: Generate CurseForge modpacks
+    runs-on: ubuntu-latest
+    outputs:
+      packs: ${{ steps.collect.outputs.packs }}
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "pnpm"
+
+      - name: Install node dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check bundles
+        run: pnpm check
+
+      - name: Cache mod jars
+        uses: actions/cache@v4
+        with:
+          path: scripts/.cache/jars
+          key: mod-jars-${{ hashFiles('data/oneclient/bundles/.mrpacks/**/*.pw.toml') }}
+          restore-keys: |
+            mod-jars-
+
+      - name: Cache upstream packwiz
+        uses: actions/cache@v4
+        with:
+          path: scripts/packwiz-upstream
+          key: packwiz-upstream-${{ hashFiles('scripts/setup-packwiz.sh', 'scripts/generate-modrinth-packs.sh') }}
+
+      - name: Generate CurseForge modpacks
+        env:
+          PACKWIZ_TOKEN: ${{ secrets.PACKWIZ_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          chmod +x ./scripts/*.sh
+          ./scripts/generate-curseforge-packs.sh
+
+      - name: Collect packs
+        id: collect
+        run: |
+          packs="$(cd scripts/.cache/curseforge && ls *.mrpack | sed 's/\.mrpack$//' | jq -R -s -c 'split("\n")[:-1]')"
+          echo "packs=$packs" >> "$GITHUB_OUTPUT"
+          echo "$packs"
+
+      - name: Upload packs
+        uses: actions/upload-artifact@v4
+        with:
+          name: curseforge-modpacks
+          path: scripts/.cache/curseforge
+
+  RunMcLocally:
+    name: ${{ matrix.pack }}
+    needs: Packs
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        pack: ${{ fromJson(needs.Packs.outputs.packs) }}
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v4
+
+      - name: Download packs
+        uses: actions/download-artifact@v4
+        with:
+          name: curseforge-modpacks
+          path: curseforge-modpacks
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Use Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: |
+            21
+            25
+
+      - name: Install portablemc
+        run: pipx install portablemc
+
+      - name: Install headless OpenGL
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends xvfb libgl1-mesa-dri mesa-vulkan-drivers
+
+      - name: Cache Minecraft install
+        uses: actions/cache@v4
+        with:
+          path: ~/.mc-ci-shared
+          key: mc-ci-${{ matrix.pack }}-${{ github.run_id }}
+          restore-keys: |
+            mc-ci-${{ matrix.pack }}-
+
+      - name: Run MC locally
+        env:
+          LIBGL_ALWAYS_SOFTWARE: "1"
+        run: bash scripts/run-mc-locally.sh "curseforge-modpacks/${{ matrix.pack }}.mrpack"
+
+      - name: Upload logs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: logs-${{ matrix.pack }}
+          path: |
+            ${{ runner.temp }}/run-mc-locally/*/client*.log
+            ${{ runner.temp }}/run-mc-locally/*/server.log
+            ${{ runner.temp }}/run-mc-locally/*/crash-reports*/
+          if-no-files-found: warn
+
+  Publish:
+    name: Publish to CurseForge
+    needs: [Packs, RunMcLocally]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Git checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "pnpm"
+
+      - name: Install node dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download packs
+        uses: actions/download-artifact@v4
+        with:
+          name: curseforge-modpacks
+          path: scripts/.cache/curseforge
+
+      - name: Publish to CurseForge
+        env:
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+          CURSEFORGE_MODPACK_PROJECT_ID: ${{ secrets.CURSEFORGE_MODPACK_PROJECT_ID }}
+          CURSEFORGE_PACK_VERSION: ${{ inputs.version }}
+          MODRINTH_MODPACK_PROJECT_ID: ${{ secrets.MODRINTH_MODPACK_PROJECT_ID }}
+        run: node ./scripts/publish-curseforge.js ${{ inputs.dry_run && '--dry-run' || '' }}
+
+      - name: Commit and push published state
+        if: always()
+        run: |
+          git config --global user.name "CurseForge Publisher[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/oneclient/bundles/.curseforge-published.json || exit 0
+          git commit -m "chore(publish-curseforge)" || echo "No changes to commit"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && break
+            echo "Push failed (attempt $i), retrying..."
+            sleep 5
+          done
