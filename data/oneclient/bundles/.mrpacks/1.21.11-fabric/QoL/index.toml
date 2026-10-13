@@ -35,11 +35,6 @@ hash = "358bcd07ee3a48ab5258ac4a1c0444779aab74de5bf721f21629c9d8cf300038"
 metafile = true
 
 [[files]]
-file = "mods/centered-crosshair.pw.toml"
-hash = "c31c4f194ec73ba8149c2b6bd353fdbbfe70fdc003fb60f23e1ce6436b73a54a"
-metafile = true
-
-[[files]]
 file = "mods/chatblock.pw.toml"
 hash = "b5ba1a1f61bb2c0dcbc15ce99a604468c011b57dd450c3d8de1cffd0eb8c7040"
 metafile = true
@@ -85,8 +80,8 @@ hash = "fbe1626b81f9fe1aa97d25076135e01ae5ad21769e1e6c27bfa60241fc88806f"
 metafile = true
 
 [[files]]
-file = "mods/crosshairtweaks.pw.toml"
-hash = "b838f8941ebab2e9f79597fc2d4fcdcd071919601e04e6c351d93cdeea73c709"
+file = "mods/crosshair.pw.toml"
+hash = "80658388607a870e2946eb19ef892acb761c1875dfa19a41792a1253812fdc18"
 metafile = true
 
 [[files]]
