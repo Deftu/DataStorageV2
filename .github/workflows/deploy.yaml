@@ -81,6 +81,9 @@ jobs:
           ./scripts/generate-bundles.sh
           ./scripts/generate-modrinth-packs.sh
 
+      - name: Generate Prism Launcher instance
+        run: node ./scripts/generate-multimc-instance.js data/oneclient/bundles/generated/oneclient-1.8.9-ornithe-multimc.zip
+
       - name: Generate mod index
         run: node ./scripts/generate-mods-json.js
 
