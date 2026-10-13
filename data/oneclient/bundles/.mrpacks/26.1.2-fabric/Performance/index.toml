@@ -1,6 +1,10 @@
 hash-format = "sha256"
 
 [[files]]
+file = "config/fabric_loader_dependencies.json"
+hash = "571f0e45cbd8294a72a27b085247e4d43794dd81b8fe0197371b7cd39f5960c1"
+
+[[files]]
 file = "mods/asynclogger.pw.toml"
 hash = "3fac4fae71590116e9d660c67b64c8beae1b848ba4fa10f402c973ee63dd31a0"
 metafile = true
