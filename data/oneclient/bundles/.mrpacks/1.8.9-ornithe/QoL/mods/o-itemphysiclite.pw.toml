@@ -2,16 +2,16 @@ id = "hEEywddE"
 enabled = true
 hidden = false
 name = "OrnitheItemPhysicLite"
-filename = "O-ItemPhysicLite-1.1.0.jar"
+filename = "O-ItemPhysicLite-1.1.1.jar"
 side = "client"
 type = "normal"
 
 [download]
-url = "https://cdn.modrinth.com/data/hEEywddE/versions/qfpc7Zm7/O-ItemPhysicLite-1.1.0.jar"
+url = "https://cdn.modrinth.com/data/hEEywddE/versions/jIZ9eX42/O-ItemPhysicLite-1.1.1.jar"
 hash-format = "sha512"
-hash = "2ccb8bb87512dd517f090ab079a3450b240ad3b74b6af3a253cf3213596dcbe975e4a2981ad164d56621aab7bbc7d892fbe6d6985f62df5579406c964dfffcba"
+hash = "a09e78785a97f0323c4b94691b1a9499f75d0f9e0c4b5e944d3580f47ff9925c74b08f2b9d7617fca3d881dd52cfc4a02bbba7fe1158c00a122b4606ad8b67af"
 
 [update]
 [update.modrinth]
 mod-id = "hEEywddE"
-version = "qfpc7Zm7"
+version = "jIZ9eX42"
