@@ -55,8 +55,8 @@ hash = "b36e8a172c56200a12b6592eacbe16621e70c288da5be54346a1ba3526f125fe"
 metafile = true
 
 [[files]]
-file = "mods/crosshair.pw.toml"
-hash = "495dc9377a94e218f24d9d0ecd4159e4706586b5c3326a3250cd5bacc27dd271"
+file = "mods/crosshairtweaks.pw.toml"
+hash = "c88463c97285c655fe458491c00ab9d334e07513b8bbb4bd7bd603559695aee7"
 metafile = true
 
 [[files]]
