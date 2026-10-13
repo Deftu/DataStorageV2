@@ -236,12 +236,12 @@ metafile = true
 
 [[files]]
 file = "mods/polynametag.pw.toml"
-hash = "d817a1721de46355ee090d3ef0f4e557dfb685acf8523152139c26dbe5aa6cef"
+hash = "a3b381591e851cb8b8509a9961cfdbc23064e880721b2993a7966cf9520a9a74"
 metafile = true
 
 [[files]]
 file = "mods/polyplus.pw.toml"
-hash = "e8ca14049f2d68284891e4930c114de02e8476cd992cffde81f277af6df8fbdf"
+hash = "6c0ae18dc8acf7a435f02f6f98682c93d0c8e59cb581b3dd0e5d5f54910188d2"
 metafile = true
 
 [[files]]
